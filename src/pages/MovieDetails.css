@@ -1,0 +1,139 @@
+/* General Styles */
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #181818;
+  color: #f1f1f1;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.movie-header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.movie-backdrop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+  transition: filter 0.3s ease;
+}
+
+.movie-backdrop:hover {
+  filter: brightness(70%);
+}
+
+.movie-title-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.movie-title {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.movie-tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.movie-info {
+  display: flex;
+  /* margin-top: -100px;   */
+  background-color: #1f1f1f;
+  margin-top: 1rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+  margin-right: 20px;
+  flex: 1;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details-info {
+  flex: 2;
+}
+
+.movie-overview {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.movie-extra-info {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.movie-rating,
+.movie-release-date,
+.movie-genres {
+  margin-bottom: 10px;
+}
+
+.movie-genres {
+  font-weight: bold;
+}
+
+.imdb-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f5c518;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.imdb-link:hover {
+  background-color: #e4b715;
+}
+
+.loading,
+.error,
+.no-data {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.no-data {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .movie-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-poster {
+    margin: 0 0 20px 0;
+  }
+}
